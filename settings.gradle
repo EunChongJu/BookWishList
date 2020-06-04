@@ -1,0 +1,2 @@
+rootProject.name='BookWishList'
+include ':app'
