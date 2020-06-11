@@ -38,53 +38,39 @@
 
     </LinearLayout>
 
-    <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="170dp"
-        android:layout_height="215dp"
-        android:layout_marginTop="8dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
-        app:srcCompat="@drawable/ic_book_sample_background" />
-
     <LinearLayout
-        android:layout_width="315dp"
-        android:layout_height="117dp"
-        android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="342dp">
+        android:layout_width="409dp"
+        android:layout_height="625dp"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="105dp">
 
-        <LinearLayout
-            android:layout_width="195dp"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
+        <TextView
+            android:id="@+id/BestRecommend"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Today Best Recommend you"
+            android:textColor="#2196F3"
+            android:textAlignment="center"
+            android:textSize="28dp" />
 
-            <TextView
-                android:id="@+id/textViewTitle"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Title" />
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="278dp" />
 
-            <TextView
-                android:id="@+id/textViewContent"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Cotent " />
-        </LinearLayout>
+        <TextView
+            android:id="@+id/BestBookSeller"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Best BookSeller List"
+            android:textSize="26dp"
+            android:textAlignment="center"
+            android:textColor="#2196F3" />
 
-        <ImageButton
-            android:id="@+id/buttonSearchImage"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:background="@drawable/round_button"
-            android:padding="5dp"
-            android:scaleType="fitCenter"
-            android:textColor="#FFF"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:srcCompat="@drawable/ic_add" />
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
