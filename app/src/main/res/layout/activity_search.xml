@@ -55,8 +55,10 @@
             android:textSize="28dp" />
 
         <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/main_listview"
             android:layout_width="match_parent"
-            android:layout_height="278dp" />
+            android:layout_height="278dp"
+            android:scrollbars="horizontal"/>
 
         <TextView
             android:id="@+id/BestBookSeller"

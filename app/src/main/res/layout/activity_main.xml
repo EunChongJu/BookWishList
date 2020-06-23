@@ -19,12 +19,12 @@
 
     <ImageButton
         android:id="@+id/buttonSearchImage"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
         android:background="@drawable/round_button"
         android:textColor="#FFF"
         android:scaleType="fitCenter"
-        android:padding="5dp"
+        android:padding="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:srcCompat="@drawable/ic_camera"/>
