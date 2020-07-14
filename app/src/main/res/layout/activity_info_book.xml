@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".InfoBook">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#2196F3"
+        android:orientation="horizontal"
+        android:padding="16dp">
+
+        <ImageButton
+            android:id="@+id/buttonMenu"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="#2196F3"
+            android:scaleType="fitXY"
+            android:textColor="#FFF"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_menu" />
+
+        <TextView
+            android:id="@+id/logoMain"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-black"
+            android:paddingRight="20dp"
+            android:text="BookWishList"
+            android:textAlignment="center"
+            android:textColor="#FFF"
+            android:textSize="36dp" />
+
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/addBookImage"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        app:srcCompat="@drawable/ic_add" />
+
+    <TextView
+        android:id="@+id/bookTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="昭和"
+        android:textSize="35dp"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addBookImage" />
+
+    <TextView
+        android:id="@+id/ratingTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Infortance of parchase"
+        app:layout_constraintBottom_toBottomOf="@+id/bookInfortance"
+        app:layout_constraintEnd_toStartOf="@+id/bookInfortance"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/bookInfortance" />
+
+    <RatingBar
+        android:id="@+id/bookInfortance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:rating="1.5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bookTitle" />
+
+    <TextView
+        android:id="@+id/bookContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="끔찍한 혼종은 왜 생겨났는가?(JPB, JP)"
+        android:textSize="15dp"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bookInfortance" />
+
+    <TextView
+        android:id="@+id/bookPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="1,800￥"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bookContent" />
+
+    <TextView
+        android:id="@+id/bookComment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="(노잼임)"
+        android:textSize="18dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bookPrice" />
+
+    <TextView
+        android:id="@+id/bookCreated"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="추가한 날짜 Apr 29, 1901"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bookComment" />
+
+    <TextView
+        android:id="@+id/bookUpdated"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="마지막으로 업데이트 한 날짜 Dec 25, 1926"
+        app:layout_constraintEnd_toEndOf="@+id/bookCreated"
+        app:layout_constraintStart_toStartOf="@+id/bookCreated"
+        app:layout_constraintTop_toBottomOf="@+id/bookCreated" />
+
+    <TextView
+        android:id="@+id/bookRemoved"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="삭제된 날짜 Jan 7, 1989"
+        app:layout_constraintEnd_toEndOf="@+id/bookUpdated"
+        app:layout_constraintStart_toStartOf="@+id/bookUpdated"
+        app:layout_constraintTop_toBottomOf="@+id/bookUpdated" />
+
+    <LinearLayout
+        android:id="@+id/modifiedSet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/buttonUpdate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="수정" />
+
+        <Button
+            android:id="@+id/buttonPurchase"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="구매 완료" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
